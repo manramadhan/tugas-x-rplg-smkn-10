@@ -4,7 +4,7 @@ class Laptop {
     // property
     public $merk;
     protected $tipe;
-    private $harga;
+    public $harga;
     // method
     
     // construct - destruct
