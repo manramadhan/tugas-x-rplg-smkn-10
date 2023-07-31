@@ -57,7 +57,7 @@ class Asus extends Laptop {
     private $password;
 
     public function __construct() {
-        echo "Password telah diganti";
+        echo "Masukkan Password";
         echo "<br />";
     }
 
