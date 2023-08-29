@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 class DB {
     private static $hostname = "localhost";
@@ -6,17 +6,15 @@ class DB {
     private static $password = "";
     private static $database = "class_ranks";
 
-    public static $koneksi;
+    public static $db;
 
-    public static function connect()
-    {
-        self::$koneksi = mysqli_connect(self::$hostname, self::$username, self::$password, self::$database);
+    public static function connect() {
+        self::$db = mysqli_connect(self::$hostname, self::$username, self::$password, self::$database);
 
-        if(self::$koneksi->connect_error) {
-            die("Koneksi bermasalah");
-        }
-        // echo "koneksi berhasil";
-        return self::$koneksi;
+        if(self::$db->connect_error) {
+            die("Koneksi error");
+        } return self::$db;
+    }
+
 
 }
-}   
